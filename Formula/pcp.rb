@@ -5,25 +5,29 @@
 class Pcp < Formula
   desc "pcp is a command line peer-to-peer data transfer tool based on libp2p."
   homepage "https://github.com/dennis-tra/pcp"
-  version "0.3.2"
+  version "0.3.3"
   license "Apache License Version 2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_macos_amd64.tar.gz"
-    sha256 "b1fc7905b1421f0af23b876955e45ec6e4bf0c816a3df04cbe64533daf485668"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.3/pcp_0.3.3_macos_amd64.tar.gz"
+    sha256 "59401452de23d8f568fc1773d8347532b98a823a1a69bb85d54f41b917501638"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_macos_arm64.tar.gz"
-    sha256 "e297059db33811d24b8fa1650960deb2f87d0842b0e8bda349caff81a0ae526a"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.3/pcp_0.3.3_macos_arm64.tar.gz"
+    sha256 "722a99124d8b44d7d2ff82784b3f875801a6df78ad40821a7e3b82fa3c3ef531"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_linux_amd64.tar.gz"
-    sha256 "0cfa371ac8ab5be3f647760212a5e0d4e4255778a81a39254632c25023b2028f"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.3/pcp_0.3.3_linux_amd64.tar.gz"
+    sha256 "1400d690a4b57e09362f1bdb5e0683eed7e0c0adc795a4410f0c63b5af64d195"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.3/pcp_0.3.3_linux_armv6.tar.gz"
+    sha256 "e10be3d3c26771edfb7c5722fd54bc66df5cf70dd154da32e1585838c15e3e75"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_linux_arm64.tar.gz"
-    sha256 "4d8786a12e7802c9acef954deea7faccd46a506b740eda68222160118815078b"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.3/pcp_0.3.3_linux_arm64.tar.gz"
+    sha256 "286f9c2aa93ba15ab629bae391e32d290c43df72ebe8db17b5b41370cfa58935"
   end
 
   def install
