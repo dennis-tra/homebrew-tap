@@ -11,11 +11,11 @@ class Pcp < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_macos_amd64.tar.gz"
-    sha256 "6993493c07ac5773842688a97796afe09438bd90131bd18988b294a7aae6f2b8"
+    sha256 "146bdb2fea85d91246011c5fda01943839ab91a5120ceab9e3fcec0c589cc92a"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_linux_amd64.tar.gz"
-    sha256 "083175abbcb4ec8b734b27ae3c858701b7cc95c57a77a5266c2b6347454ba480"
+    sha256 "d65b9667707572eb9008bdea800663ca836d2ef2834c9425a720318902e7ee3c"
   end
 
   def install
