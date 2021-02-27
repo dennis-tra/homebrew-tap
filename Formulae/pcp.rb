@@ -10,12 +10,12 @@ class Pcp < Formula
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_macos-amd64.tar.gz"
-    sha256 "add3ed66ba6f71de26865bde05b4254ed404a3f01c3f58778ef3f111fdbc9629"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_darwin_amd64.tar.gz"
+    sha256 "23a71dfff09721d5ab3e3482a4403291b50f342c28a47d43acfdd3d8c313b705"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_linux-amd64.tar.gz"
-    sha256 "42e733c05480cfc6ea6a7ebb0600129a83957df90636b17115ceb2caf018ed8d"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.3.2/pcp_0.3.2_linux_amd64.tar.gz"
+    sha256 "8fbfcdba2363e3a033b8fa7457f09869a0b808d4ef5da41a9a4eae9a41ebcddd"
   end
 
   def install
