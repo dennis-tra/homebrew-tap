@@ -5,29 +5,29 @@
 class Pcp < Formula
   desc "pcp is a command line peer-to-peer data transfer tool based on libp2p."
   homepage "https://github.com/dennis-tra/pcp"
-  version "0.4.0-rc2"
+  version "0.4.0"
   license "Apache License Version 2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0-rc2/pcp_0.4.0-rc2_macos_amd64.tar.gz"
-    sha256 "1d562c057c572d3a88ec849d9352753f74e3433084bbff313ca8a8d3f54d66fc"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0/pcp_0.4.0_macos_amd64.tar.gz"
+    sha256 "a053ea9c1e2e1af98e8773c3f0a91e9191b961b41b2921277235de30467f2e88"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0-rc2/pcp_0.4.0-rc2_macos_arm64.tar.gz"
-    sha256 "d8065ec4ef35ddd29a640b4bf18c4f20551658a40f1fa9e416ebd597a40cefea"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0/pcp_0.4.0_macos_arm64.tar.gz"
+    sha256 "22452930ccd3537a0e734b6ecd99521683bdbee13b75c7b691f69f8ca5176ed2"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0-rc2/pcp_0.4.0-rc2_linux_amd64.tar.gz"
-    sha256 "27541b747de9e8516decb5aa7cf9bb080b7b0ffc383204f4ab5b2ae06414205b"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0/pcp_0.4.0_linux_amd64.tar.gz"
+    sha256 "4727917b4ea54a318d8ef84fba1c364505796fd011213202fcdba71b19d33b82"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0-rc2/pcp_0.4.0-rc2_linux_armv6.tar.gz"
-    sha256 "1758edfc40162881da644d6ca7e7c564c9fa09ba1afac07a2edb2a671ab7d1cf"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0/pcp_0.4.0_linux_armv6.tar.gz"
+    sha256 "c9103cac6970bbe92d3e24dc9bb80f1d4005dd7531c524f8e5c564c8b406ee94"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0-rc2/pcp_0.4.0-rc2_linux_arm64.tar.gz"
-    sha256 "2bb9f54f767c77e04a1e9d10550aaaf0498214c54d8e5c44b1f344b501810c43"
+    url "https://github.com/dennis-tra/pcp/releases/download/v0.4.0/pcp_0.4.0_linux_arm64.tar.gz"
+    sha256 "58fa4a2f613f21dc9bd5a298f15d69204ba874f2018fb52237ddce7c1d439cae"
   end
 
   def install
